@@ -1,0 +1,11 @@
+
+project_id: "rag-helpdesk"
+location: "US"          # BigQuery Vector Search saat ini best-effort di US/region yang didukung
+dataset:  "rag_helpdesk"
+table:    "chunks"
+bucket:   ""            # opsional, jika ingin simpan file ke GCS
+chunk_size: 900         # approx tokens/characters windowing; BGE-M3 max 8192 tokens
+chunk_overlap: 150
+language_hint: "id,en"
+min_chars: 200
+max_chars: 3000
